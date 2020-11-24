@@ -1,0 +1,57 @@
+﻿<Window x:Class="WpfAppDemo2DoginatorBrowser.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfAppDemo2DoginatorBrowser"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <StackPanel Orientation="Horizontal">
+                <Label x:Name="lblIndex" Content=""></Label>
+                
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label x:Name="lblName" Content="Name:"></Label>
+                <TextBlock x:Name="tbName" VerticalAlignment="Center">Name</TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label x:Name="lblAge" Content="Age"></Label>
+                <TextBlock x:Name="tbAge" VerticalAlignment="Center">Age</TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label x:Name="lblBarkSound" Content="BarkSound"></Label>
+                <TextBlock x:Name="tbBarkSound" VerticalAlignment="Center">BarkSound</TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label x:Name="lblWeight" Content="Weight"></Label>
+                <TextBlock x:Name="tbWeight" VerticalAlignment="Center">Weight</TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Button x:Name="btnAbout" Click="btnAbout_Click">About</Button>
+                
+                <Separator Margin="5"></Separator>
+                <Button x:Name="btnEat" Click="btnEat_Click">Eat</Button>
+                <Separator Margin="5"></Separator>
+                <Button x:Name="btnPoop" Click="btnPoop_Click">Poop</Button>
+                <Label x:Name="lblAbout"></Label>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Button x:Name="btnNavPrev" Click="btnNavPrev_Click">Prev</Button>
+                <Separator Margin="5"></Separator>
+                <Button x:Name="btnNavNext" Click="btnNavNext_Click">Next</Button>
+                <Separator Margin="5"></Separator>
+                <Button x:Name="btnAddDog" Click="btnAddDog_Click">Add Dog</Button>
+            </StackPanel>
+            <StackPanel x:Name="pnlAddDog" Visibility="Collapsed">
+                <TextBox x:Name="tbAddDogName">Fido</TextBox>
+                <TextBox x:Name="tbAddDogAge">3</TextBox>
+                <TextBox x:Name="tbAddDogWieght">7</TextBox>
+                <TextBox x:Name="tbAddDogBarkSound">Arf!</TextBox>
+                <Button x:Name="btnAddDogSave" Click="btnAddDogSave_Click">Save</Button>
+            </StackPanel>
+            <Image x:Name="imgDogImage" Source="/Fido.jpg" />
+        </StackPanel>
+    </Grid>
+</Window>
